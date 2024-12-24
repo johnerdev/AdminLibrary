@@ -1,0 +1,83 @@
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Modificar Cpu</h3>
+      </div>
+      </div>
+    <div class="container">
+                 <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="row mb-2"> 
+                
+                        <div class="col-sm-12 col-md-4 mx-auto">
+                            <div class="form-group">
+                                <label for="dni">CODIGO:</label>
+                                <label for="dni">LB-CPU-001</label>
+                                <!-- <input type="text" class="form-control" id="dni" name="dni"
+                                [(ngModel)]="dni" required> -->
+                            </div>       
+                            <div class="form-group">
+                                <label for="dni">Marca:</label>
+                                <label for="dni">AVANTEC</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Placa:</label>
+                                <label for="dni">ABUED-15451</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">Procesador:</label>
+                                <label for="dni">Core i3 octava generacion</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="registrationplate">Disco Duro:</label>
+                                <label for="dni">80 GB HDD</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="registrationplate">Memoria Ram:</label>
+                                <label for="dni">8GB DDR3</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="registrationplate">Tarjeta de video:</label>
+                                <label for="dni">INTEGRADA</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="registrationplate">Color:</label>
+                                <label for="dni">PLOMO</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="registrationplate">Serie:</label>
+                                <label for="dni">ASDASDASD</label>
+                            </div>
+                                        
+        
+                        </div>
+                          <div class="col-sm-12 col-md-4 mx-auto">  
+                             <div class="form-group">
+                                <label for="carbrand">Estado:</label>
+                                <select class="form-control" id="type" name="type" [(ngModel)]="type" required>
+                                    <option value="Administrativo">OPERATIVO</option> 
+                                    <option value="Directivo">INOPERATIVO</option> 
+                                    <option value="Directivo">REPARACIÓN</option>
+                                 </select>
+        
+                             </div>
+                            <div class="form-group">
+                                <label for="registrationplate">Observación:</label>
+                                <input type="text" class="form-control" id="phone" name="phone"
+                                [(ngModel)]="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registrationplate">Destino:</label>
+                                <input type="text" class="form-control" id="phone" name="phone"
+                                [(ngModel)]="phone" required>
+                            </div>
+        
+                         </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 mx-auto">
+                        <button class="btn btn-outline-primary btn-block" [disabled]="!f.valid">Enviar</button>
+                    </div>
+                    
+                </form>
+            
+            </div>
+            
+            

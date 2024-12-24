@@ -1,0 +1,7 @@
+.color{
+    color: orange;
+}
+
+.color:hover{
+    color: rgb(29, 4, 49);
+}

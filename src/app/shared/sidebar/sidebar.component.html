@@ -1,0 +1,169 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar elevation-4">
+    <!-- Brand Logo -->
+    <a  class="brand-link">
+      <img src="../../../assets/dist/img/logo.png">
+      
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">         <!-- Sidebar Menu -->
+      
+      <nav class="mt-2" >
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a routerLink="dashboard" class="nav-link hover">
+                <i class="fa-solid fa-table-cells-large nav-icon" style="color: white;"></i>
+              <p style="color: white;">Tablero</p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview" id="drop" *ngFor="let item of menuItemsx" >
+              
+            <a class="nav-link hover" >
+              <i class="{{item.icono}}" style="color: white; padding-left: 5px; font-size: 20px;"></i>
+              <p class="ml-2" style="color: white;">
+                {{item.titulo}}
+                
+                <i class="right fas fa-angle-left" id="flecha"></i>
+              </p>
+            </a>
+            <ul class="nav " id="subdrop">
+              <li class="nav-item" *ngFor="let subMenuItem of item.submenux">
+                <a [routerLink]="subMenuItem.url" class="nav-link" style="cursor: pointer;">
+                  
+                  <p class="ml-2 smenu" style="padding-left: 25px;">{{subMenuItem.titulo}}</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+        </ul>
+       
+        <ul  *ngFor="let item of menuItems" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+              <li class="nav-item"  *ngFor="let subMenuItem of item.submenu"  >
+                <!-- <a [routerLink]="subMenuItem.url" class="nav-link" style="cursor: pointer;" *ngIf="currentUser == 'ROLE_ADMIN' || currentUser == subMenuItem.user "> -->
+                <a [routerLink]="subMenuItem.url" class="nav-link hover">
+                    <i class="{{subMenuItem.icono}}" style="color: white;"></i>
+                  <p style="color: white;">{{subMenuItem.titulo}}</p>
+                </a>
+              </li>
+                     
+             <!-- FInal de Menu -->
+             <li class="nav-item has-treeview" id="drop" *ngFor="let item of menuItemsCamara" >
+              
+              <a class="nav-link hover " >
+                <i class="{{item.icono}}" style="color: white; padding-left: 5px; font-size: 20px;"></i>
+                <p class="ml-2" style="color: white;">
+                  {{item.titulo}}
+                  
+                  <i class="right fas fa-angle-left" id="flecha"></i>
+                </p>
+              </a>
+              <ul class="nav " id="subdrop">
+                <li class="nav-item" *ngFor="let subMenuItem of item.submenux">
+                  <a [routerLink]="subMenuItem.url" class="nav-link" style="cursor: pointer;">
+                    
+                    <p class="ml-2 smenu" style="padding-left: 25px;">{{subMenuItem.titulo}}</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+             <!-- FInal de Menu -->
+              <!-- FInal de Menu -->
+              <li class="nav-item has-treeview" id="drop" *ngFor="let item of menuItemsRed" >
+              
+                <a class="nav-link hover " >
+                  <i class="{{item.icono}}" style="color: white; padding-left: 5px; font-size: 20px;"></i>
+                  <p class="ml-2" style="color: white;">
+                    {{item.titulo}}
+                    
+                    <i class="right fas fa-angle-left" id="flecha"></i>
+                  </p>
+                </a>
+                <ul class="nav " id="subdrop">
+                  <li class="nav-item" *ngFor="let subMenuItem of item.submenux">
+                    <a [routerLink]="subMenuItem.url" class="nav-link" style="cursor: pointer;">
+                      
+                      <p class="ml-2 smenu" style="padding-left: 25px;">{{subMenuItem.titulo}}</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+               <!-- FInal de Menu -->
+                  <!-- FInal de Menu -->
+              <li class="nav-item has-treeview" id="drop" *ngFor="let item of menuItemsOther" >
+              
+                <a class="nav-link hover" >
+                  <i class="{{item.icono}}" style="color: white; padding-left: 5px; font-size: 20px;"></i>
+                  <p class="ml-2" style="color: white;">
+                    {{item.titulo}}
+                    
+                    <i class="right fas fa-angle-left" id="flecha"></i>
+                  </p>
+                </a>
+                <ul class="nav " id="subdrop">
+                  <li class="nav-item" *ngFor="let subMenuItem of item.submenux">
+                    <a [routerLink]="subMenuItem.url" class="nav-link" style="cursor: pointer;">
+                      
+                      <p class="ml-2 smenu" style="padding-left: 25px;">{{subMenuItem.titulo}}</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+               <!-- FInal de Menu -->
+                  <!-- FInal de Menu -->
+              <li class="nav-item has-treeview" id="drop" *ngFor="let item of menuItemsReport" >
+              
+                <a class="nav-link hover" >
+                  <i class="{{item.icono}}" style="color: white; padding-left: 5px; font-size: 20px;"></i>
+                  <p class="ml-2" style="color: white;">
+                    {{item.titulo}}
+                    
+                    <i class="right fas fa-angle-left" id="flecha"></i>
+                  </p>
+                </a>
+                <ul class="nav " id="subdrop">
+                  <li class="nav-item" *ngFor="let subMenuItem of item.submenux">
+                    <a [routerLink]="subMenuItem.url" class="nav-link" style="cursor: pointer;">
+                      
+                      <p class="ml-2 smenu" style="padding-left: 25px;">{{subMenuItem.titulo}}</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+               <!-- FInal de Menu -->
+                      <!-- FInal de Menu -->
+              <li class="nav-item has-treeview" id="drop" *ngFor="let item of menuItemsLoans" >
+              
+                <a class="nav-link hover" >
+                  <i class="{{item.icono}}" style="color: white; padding-left: 5px; font-size: 20px;"></i>
+                  <p class="ml-2" style="color: white;">
+                    {{item.titulo}}
+                    
+                    <i class="right fas fa-angle-left" id="flecha"></i>
+                  </p>
+                </a>
+                <ul class="nav " id="subdrop">
+                  <li class="nav-item" *ngFor="let subMenuItem of item.submenux">
+                    <a [routerLink]="subMenuItem.url" class="nav-link" style="cursor: pointer;">
+                      
+                      <p class="ml-2 smenu" style="padding-left: 25px;">{{subMenuItem.titulo}}</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+               <!-- FInal de Menu -->
+              <li class="nav-item">
+                <a (click)="logout()" class="nav-link hover" >
+                    <i class="fas fa-sign-out-alt nav-icon" style="color: white;"></i>
+                  <p style="color: white;">Cerrar Sesión</p>
+                </a>
+              </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

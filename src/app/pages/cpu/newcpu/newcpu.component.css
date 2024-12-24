@@ -1,0 +1,22 @@
+h3{
+    color:gray;
+}
+
+label{
+    color:#0F1047;
+    font-weight: normal !important;
+    font-size: 15px;
+}
+input{
+    border-radius: 15px;
+}
+
+select{
+    border-radius: 15px;
+}
+
+button{
+    border-radius: 15px;
+    width: 200px !important;
+    
+}
